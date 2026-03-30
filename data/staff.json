@@ -1,0 +1,38 @@
+[
+  {
+    "id": "ST-001",
+    "name": "Elena Voss",
+    "role": "Trainer",
+    "skill": 82,
+    "morale": 76,
+    "salary": 95000,
+    "stableId": "S-001"
+  },
+  {
+    "id": "ST-002",
+    "name": "Luca Marin",
+    "role": "Jockey",
+    "skill": 79,
+    "morale": 72,
+    "salary": 88000,
+    "stableId": "S-001"
+  },
+  {
+    "id": "ST-003",
+    "name": "Dr. Naomi Kerr",
+    "role": "Vet",
+    "skill": 84,
+    "morale": 80,
+    "salary": 92000,
+    "stableId": "S-001"
+  },
+  {
+    "id": "ST-004",
+    "name": "Rafi Cole",
+    "role": "Scout",
+    "skill": 74,
+    "morale": 69,
+    "salary": 54000,
+    "stableId": "S-001"
+  }
+]

@@ -1,0 +1,182 @@
+[
+  {
+    "id": "UK-ASCOT",
+    "name": "Ascot Racecourse",
+    "country": "UK",
+    "region": "England",
+    "disciplines": ["Flat", "Jumps"],
+    "surfaces": ["Turf"],
+    "notableRaces": ["King George VI and Queen Elizabeth Stakes", "Ascot Chase"]
+  },
+  {
+    "id": "UK-NEWMARKET",
+    "name": "Newmarket (Rowley Mile / July Course)",
+    "country": "UK",
+    "region": "England",
+    "disciplines": ["Flat"],
+    "surfaces": ["Turf"],
+    "notableRaces": ["2000 Guineas", "1000 Guineas", "July Cup"]
+  },
+  {
+    "id": "UK-EPSOM",
+    "name": "Epsom Downs",
+    "country": "UK",
+    "region": "England",
+    "disciplines": ["Flat"],
+    "surfaces": ["Turf"],
+    "notableRaces": ["Derby Stakes", "Oaks Stakes", "Coronation Cup"]
+  },
+  {
+    "id": "UK-YORK",
+    "name": "York Racecourse",
+    "country": "UK",
+    "region": "England",
+    "disciplines": ["Flat"],
+    "surfaces": ["Turf"],
+    "notableRaces": ["Juddmonte International", "Nunthorpe Stakes"]
+  },
+  {
+    "id": "UK-GOODWOOD",
+    "name": "Goodwood Racecourse",
+    "country": "UK",
+    "region": "England",
+    "disciplines": ["Flat"],
+    "surfaces": ["Turf"],
+    "notableRaces": ["Sussex Stakes", "Goodwood Cup"]
+  },
+  {
+    "id": "UK-DONCASTER",
+    "name": "Doncaster Racecourse",
+    "country": "UK",
+    "region": "England",
+    "disciplines": ["Flat"],
+    "surfaces": ["Turf"],
+    "notableRaces": ["St Leger", "Racing Post Trophy/Futurity Trophy"]
+  },
+  {
+    "id": "UK-NEWBURY",
+    "name": "Newbury Racecourse",
+    "country": "UK",
+    "region": "England",
+    "disciplines": ["Flat", "Jumps"],
+    "surfaces": ["Turf"],
+    "notableRaces": ["Lockinge Stakes", "Hennessy Gold Cup"]
+  },
+  {
+    "id": "UK-SANDOWN",
+    "name": "Sandown Park",
+    "country": "UK",
+    "region": "England",
+    "disciplines": ["Flat", "Jumps"],
+    "surfaces": ["Turf"],
+    "notableRaces": ["Eclipse Stakes", "Tingle Creek"]
+  },
+  {
+    "id": "UK-HAYDOCK",
+    "name": "Haydock Park",
+    "country": "UK",
+    "region": "England",
+    "disciplines": ["Flat", "Jumps"],
+    "surfaces": ["Turf"],
+    "notableRaces": ["Sprint Cup", "Betfair Chase"]
+  },
+  {
+    "id": "UK-CHESTER",
+    "name": "Chester Racecourse",
+    "country": "UK",
+    "region": "England",
+    "disciplines": ["Flat"],
+    "surfaces": ["Turf"],
+    "notableRaces": ["Chester Vase", "Chester Cup"]
+  },
+  {
+    "id": "UK-AINTREE",
+    "name": "Aintree Racecourse",
+    "country": "UK",
+    "region": "England",
+    "disciplines": ["Jumps"],
+    "surfaces": ["Turf"],
+    "notableRaces": ["Grand National", "Aintree Hurdle"]
+  },
+  {
+    "id": "UK-CHELTENHAM",
+    "name": "Cheltenham Racecourse",
+    "country": "UK",
+    "region": "England",
+    "disciplines": ["Jumps"],
+    "surfaces": ["Turf"],
+    "notableRaces": ["Cheltenham Gold Cup", "Champion Hurdle"]
+  },
+  {
+    "id": "UK-KEMPTON",
+    "name": "Kempton Park",
+    "country": "UK",
+    "region": "England",
+    "disciplines": ["Flat", "Jumps"],
+    "surfaces": ["All-Weather", "Turf"],
+    "notableRaces": ["King George VI Chase", "Winter Derby"]
+  },
+  {
+    "id": "UK-NEWCASTLE",
+    "name": "Newcastle Racecourse",
+    "country": "UK",
+    "region": "England",
+    "disciplines": ["Flat", "Jumps"],
+    "surfaces": ["All-Weather", "Turf"],
+    "notableRaces": ["Northumberland Plate", "Fighting Fifth Hurdle"]
+  },
+  {
+    "id": "IRE-CURRAGH",
+    "name": "The Curragh",
+    "country": "Ireland",
+    "region": "County Kildare",
+    "disciplines": ["Flat"],
+    "surfaces": ["Turf"],
+    "notableRaces": ["Irish 2000 Guineas", "Irish Derby", "Irish St Leger"]
+  },
+  {
+    "id": "IRE-LEOPARDSTOWN",
+    "name": "Leopardstown",
+    "country": "Ireland",
+    "region": "County Dublin",
+    "disciplines": ["Flat", "Jumps"],
+    "surfaces": ["Turf"],
+    "notableRaces": ["Irish Champion Stakes", "Dublin Racing Festival"]
+  },
+  {
+    "id": "IRE-FAIRYHOUSE",
+    "name": "Fairyhouse",
+    "country": "Ireland",
+    "region": "County Meath",
+    "disciplines": ["Jumps"],
+    "surfaces": ["Turf"],
+    "notableRaces": ["Irish Grand National"]
+  },
+  {
+    "id": "IRE-PUNCHESTOWN",
+    "name": "Punchestown",
+    "country": "Ireland",
+    "region": "County Kildare",
+    "disciplines": ["Jumps"],
+    "surfaces": ["Turf"],
+    "notableRaces": ["Punchestown Gold Cup", "Champion Hurdle"]
+  },
+  {
+    "id": "IRE-NAVAN",
+    "name": "Navan",
+    "country": "Ireland",
+    "region": "County Meath",
+    "disciplines": ["Flat", "Jumps"],
+    "surfaces": ["Turf"],
+    "notableRaces": ["Troytown Handicap Chase"]
+  },
+  {
+    "id": "IRE-GALWAY",
+    "name": "Galway Racecourse",
+    "country": "Ireland",
+    "region": "County Galway",
+    "disciplines": ["Flat", "Jumps"],
+    "surfaces": ["Turf"],
+    "notableRaces": ["Galway Plate", "Galway Hurdle"]
+  }
+]
