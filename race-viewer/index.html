@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stablemaster Web Prototype</title>
+  <style>
+    :root {
+      --bg: #0b1020; --panel: #121a2f; --panel-2: #19233f; --text: #e6ecff; --muted: #9fb0d9;
+      --accent: #60a5fa; --good: #34d399; --warn: #fbbf24; --danger: #f87171;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Inter, system-ui, sans-serif; color: var(--text); background: radial-gradient(circle at top, #152346 0%, var(--bg) 60%); }
+    .layout { display: grid; grid-template-columns: 400px 1fr; min-height: 100vh; gap: 12px; padding: 12px; }
+    .card { background: linear-gradient(180deg, var(--panel) 0%, #0e1528 100%); border: 1px solid #27355f; border-radius: 14px; box-shadow: 0 10px 25px rgba(0,0,0,.25); }
+    .left { display: grid; grid-template-rows: auto auto 1fr auto; gap: 12px; min-height: 0; }
+    .section { padding: 14px; }
+    h1 { font-size: 20px; margin: 0 0 4px; }
+    h2 { font-size: 12px; margin: 0 0 10px; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; }
+    .muted { color: var(--muted); font-size: 13px; }
+    .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-top: 8px; }
+    .stat { background: var(--panel-2); border-radius: 10px; padding: 8px; }
+    .stat .k { font-size: 10px; color: var(--muted); }
+    .stat .v { font-size: 18px; font-weight: 700; }
+    .controls { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    button { background: linear-gradient(180deg, #3b82f6, #2563eb); color: white; border: none; border-radius: 10px; padding: 10px; font-weight: 600; cursor: pointer; }
+    button.secondary { background: linear-gradient(180deg, #64748b, #475569); }
+    button:disabled { opacity: .45; cursor: not-allowed; }
+    .toolbar { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 10px; }
+    .toolbar button.active { outline: 2px solid #93c5fd; }
+    table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    th, td { padding: 7px 5px; border-bottom: 1px solid #223050; text-align: left; }
+    th { color: var(--muted); font-weight: 600; position: sticky; top: 0; background: #111a31; }
+    .table-wrap { max-height: 300px; overflow: auto; border-radius: 10px; border: 1px solid #24345b; }
+    .pill { font-size: 11px; border-radius: 20px; padding: 2px 8px; background: #26385f; }
+    .pill.good { background: rgba(52,211,153,.2); color: #6ee7b7; }
+    .pill.warn { background: rgba(251,191,36,.2); color: #fcd34d; }
+    .pill.bad { background: rgba(248,113,113,.2); color: #fca5a5; }
+    .bar { height: 6px; background: #223156; border-radius: 20px; overflow: hidden; }
+    .bar > span { display: block; height: 100%; background: linear-gradient(90deg, #60a5fa, #34d399); }
+    .right { position: relative; overflow: hidden; }
+    #viewer { width: 100%; height: calc(100vh - 24px); border-radius: 14px; }
+    .overlay { position: absolute; top: 12px; right: 12px; width: 350px; max-height: calc(100vh - 48px); overflow: auto; background: rgba(10,15,31,.88); border: 1px solid #27355f; border-radius: 12px; padding: 10px; backdrop-filter: blur(4px); }
+    .result-row { display: flex; justify-content: space-between; border-bottom: 1px solid #26375f; padding: 8px 2px; font-size: 13px; }
+    .speed { display: flex; gap: 6px; margin-top: 8px; }
+    .speed button { padding: 6px 8px; font-size: 12px; }
+  </style>
+</head>
+<body>
+  <div class="layout">
+    <aside class="left">
+      <section class="card section">
+        <h1>Stablemaster</h1>
+        <div class="muted">Modern HTML prototype • management + Three.js race viewer</div>
+        <div class="stats">
+          <div class="stat"><div class="k">Week</div><div class="v" id="week">1</div></div>
+          <div class="stat"><div class="k">Cash</div><div class="v" id="cash">$250k</div></div>
+          <div class="stat"><div class="k">Healthy</div><div class="v" id="healthy">0</div></div>
+          <div class="stat"><div class="k">Avg Form</div><div class="v" id="avgForm">0</div></div>
+        </div>
+      </section>
+
+      <section class="card section">
+        <h2>Actions</h2>
+        <div class="controls">
+          <button id="advanceWeekBtn">Advance Week</button>
+          <button id="runRaceBtn">Run Race</button>
+          <button id="autoWeekBtn" class="secondary">+4 Weeks</button>
+          <button id="resetBtn" class="secondary">Reset</button>
+        </div>
+        <div class="toolbar">
+          <button id="tabRoster" class="active">Roster</button>
+          <button id="tabInsights">Insights</button>
+          <button id="tabLog">Log</button>
+        </div>
+      </section>
+
+      <section class="card section" id="panelRoster">
+        <h2>Horse Roster</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Horse</th><th>Status</th><th>Form</th><th>Load</th></tr></thead>
+            <tbody id="roster"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="card section" id="panelInsights" style="display:none;">
+        <h2>Stable Insights</h2>
+        <div id="insights" class="muted"></div>
+      </section>
+
+      <section class="card section" id="panelLog" style="display:none;">
+        <h2>Weekly Log</h2>
+        <div id="log" class="muted" style="max-height: 220px; overflow:auto;"></div>
+      </section>
+    </aside>
+
+    <main class="right card">
+      <div id="viewer"></div>
+      <div class="overlay">
+        <h2 style="margin-top:2px;">Race Results</h2>
+        <div class="muted" id="raceMeta">No race run yet.</div>
+        <div class="speed">
+          <button data-speed="0.5">0.5x</button>
+          <button data-speed="1" class="active">1x</button>
+          <button data-speed="2">2x</button>
+          <button data-speed="4">4x</button>
+        </div>
+        <div id="results"></div>
+      </div>
+    </main>
+  </div>
+
+  <script type="module" src="./viewer.js"></script>
+</body>
+</html>
