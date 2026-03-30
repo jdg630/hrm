@@ -28,9 +28,9 @@ Serve the repository and open `/race-viewer/` to play the web prototype:
 
 ## Real-world 2025/2026 calendar data
 
-- `data/races.json` contains a real-world **2025/2026 Road to the Kentucky Derby** season schedule snapshot.
+- `data/races.json` now contains an expanded race list (171 races) spanning the Road to the Kentucky Derby plus additional major UK/Ireland and international races, including an expanded UK/Ireland jumps program plus group/graded/listed race coverage plus premier handicaps for broader gameplay coverage.
 - `data/race_calendar_sources.json` records the official source and normalization notes.
-- `data/racecourses.json` contains major UK/Ireland flat and jumps racecourse metadata used as a relational lookup by race rows (`racecourseId`).
+- `data/racecourses.json` contains expanded major UK/Ireland plus international racecourse metadata (US/UAE/France/Australia/Japan/Hong Kong) used as a relational lookup by race rows (`racecourseId`).
 
 ## Relational data model
 

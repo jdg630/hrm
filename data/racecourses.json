@@ -4,9 +4,17 @@
     "name": "Ascot Racecourse",
     "country": "UK",
     "region": "England",
-    "disciplines": ["Flat", "Jumps"],
-    "surfaces": ["Turf"],
-    "notableRaces": ["King George VI and Queen Elizabeth Stakes", "Ascot Chase"]
+    "disciplines": [
+      "Flat",
+      "Jumps"
+    ],
+    "surfaces": [
+      "Turf"
+    ],
+    "notableRaces": [
+      "King George VI and Queen Elizabeth Stakes",
+      "Ascot Chase"
+    ]
   },
   {
     "id": "UK-NEWMARKET",
