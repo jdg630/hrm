@@ -1,0 +1,8 @@
+[
+  {
+    "id": "S-001",
+    "name": "Blue Lantern Racing",
+    "cashBalance": 250000,
+    "horseIds": ["H-001", "H-002", "H-003", "H-004", "H-005", "H-006"]
+  }
+]

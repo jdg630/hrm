@@ -1,0 +1,14 @@
+{
+  "raceId": "R-001",
+  "raceName": "Spring Cup Trial",
+  "date": "2026-04-19",
+  "trackLength": 1600,
+  "results": [
+    {"horseId":"H-001","horseName":"Iron Comet","position":1,"score":87.4,"explanation":"sample"},
+    {"horseId":"H-004","horseName":"North Banner","position":2,"score":84.2,"explanation":"sample"},
+    {"horseId":"H-005","horseName":"Amber Vow","position":3,"score":82.8,"explanation":"sample"},
+    {"horseId":"H-002","horseName":"Velvet Thistle","position":4,"score":81.5,"explanation":"sample"},
+    {"horseId":"H-006","horseName":"Silver Harrier","position":5,"score":79.1,"explanation":"sample"},
+    {"horseId":"H-003","horseName":"River Quill","position":6,"score":77.9,"explanation":"sample"}
+  ]
+}
